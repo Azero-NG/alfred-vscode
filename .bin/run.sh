@@ -10,4 +10,7 @@ then
   VSCODE_APP_EDITION="VSCodium"
 fi
 
-open -a "${VSCODE_APP_EDITION}" "$1"
+VSCODE_BIN_PATH="/Applications/$VSCODE_APP_EDITION.app/Contents/Resources/app/bin/code"
+
+echo $VSCODE_BIN_PATH
+"$VSCODE_BIN_PATH" --folder-uri "$1"
